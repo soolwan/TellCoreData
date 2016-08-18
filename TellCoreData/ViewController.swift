@@ -151,6 +151,10 @@ class ViewController: UIViewController, SpeechServiceDelegate, UITableViewDataSo
             if let newIndexPath = newIndexPath {
                 tableView.insertRows(at: [newIndexPath], with: .fade)
             }
+        case .delete:
+            if let indexPath = indexPath {
+                tableView.deleteRows(at: [indexPath], with: .fade)
+            }
         default:
             return
         }
@@ -160,6 +164,10 @@ class ViewController: UIViewController, SpeechServiceDelegate, UITableViewDataSo
 
     @IBAction func recordButtonPressed(_ sender: UIButton) {
         speechService?.startStop()
+    }
+
+    @IBAction func clearButtonPressed(_ sender: AnyObject) {
+        colorService.deleteColors()
     }
 
     // MARK: - Outlets

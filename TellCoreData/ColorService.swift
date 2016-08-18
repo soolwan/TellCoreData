@@ -53,6 +53,24 @@ class ColorService {
         }
     }
 
+    func deleteColors() {
+        coreDataManager?.container.performBackgroundTask() { (context) in
+            let request: NSFetchRequest<Colour> = Colour.fetchRequest()
+            let colors = try! request.execute()
+
+            for color in colors {
+                context.delete(color)
+            }
+
+            do {
+                try context.save()
+            } catch let error as NSError {
+                let deleteError = error as NSError
+                print("\(deleteError), \(deleteError.userInfo)")
+            }
+        }
+    }
+
     func colorsIn(text: String) -> [String]? {
         if let regex = makeRegexWithColors(colors: supportedColors) {
             let colorMatches = matchesForRegex(regex: regex, inText: text.lowercased())

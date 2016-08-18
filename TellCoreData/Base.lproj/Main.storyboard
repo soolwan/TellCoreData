@@ -36,26 +36,39 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="33O-pd-f33"/>
                                 </connections>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yVh-RV-DeS">
-                                <state key="normal" title="Record"/>
-                                <connections>
-                                    <action selector="recordButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="sfy-wa-duE"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H2e-LE-g6o">
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jzm-kD-ysW">
+                                        <state key="normal" title="Record"/>
+                                        <connections>
+                                            <action selector="recordButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ngh-kT-Obs"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="350" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RIn-Th-WsP" userLabel="Clear Button">
+                                        <state key="normal" title="Clear"/>
+                                        <connections>
+                                            <action selector="clearButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Kp2-td-vVK"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="MpK-Qc-aT3"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="JQJ-td-NLh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="7u1-4J-btQ"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="yVh-RV-DeS" secondAttribute="bottom" constant="8" id="E3C-wO-Ot3"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="H2e-LE-g6o" secondAttribute="leading" id="0Xs-0t-XbT"/>
                             <constraint firstItem="JQJ-td-NLh" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="HT7-Y9-NUc"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="yVh-RV-DeS" secondAttribute="trailing" constant="8" id="K1S-KR-ty1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JQJ-td-NLh" secondAttribute="trailing" id="LUz-2J-7pc"/>
-                            <constraint firstItem="yVh-RV-DeS" firstAttribute="top" secondItem="JQJ-td-NLh" secondAttribute="bottom" constant="8" id="V44-IH-Zyt"/>
-                            <constraint firstItem="yVh-RV-DeS" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="8" id="h9f-uw-5oa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="H2e-LE-g6o" secondAttribute="bottom" constant="8" id="bUH-pz-ccG"/>
+                            <constraint firstItem="H2e-LE-g6o" firstAttribute="top" secondItem="JQJ-td-NLh" secondAttribute="bottom" constant="8" id="dwK-GR-sIM"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="JQJ-td-NLh" secondAttribute="leading" id="iw0-3n-ZUT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="H2e-LE-g6o" secondAttribute="trailing" id="t0J-XY-bvL"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="recordButton" destination="yVh-RV-DeS" id="RSG-sh-o8n"/>
+                        <outlet property="recordButton" destination="Jzm-kD-ysW" id="fGc-Bz-9Wi"/>
                         <outlet property="tableView" destination="JQJ-td-NLh" id="eqU-Iy-sn3"/>
                     </connections>
                 </viewController>
