@@ -3,7 +3,6 @@
 //  TellCoreData
 //
 //  Created by Sean Coleman on 8/17/16.
-//  Copyright © 2016 Sean Coleman. All rights reserved.
 //
 
 import Foundation

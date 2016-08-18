@@ -3,7 +3,6 @@
 //  Future Self
 //
 //  Created by Sean Coleman on 8/16/16.
-//  Copyright © 2016 Sean Coleman. All rights reserved.
 //
 
 import Foundation
